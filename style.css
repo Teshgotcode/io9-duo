@@ -4,7 +4,7 @@
   --ink: #0f1013; --ink-2: #444851; --ink-3: #666b74;
   --line: #c9cdd3; --rose: #a3404f; --rose-q: #efc4c2; --on-rose: #2a1216;
   --panel: #131316; --panel-ink: #eeeeef; --panel-ink-2: #a8abb2; --panel-line: #2b2c31;
-  --room1: #f3d5d3; --room2: #1a1b1f; --case: #26272c; --case-edge: #3d3f46;
+  --room1: #f3d5d3; --room1-ink: #2a1216; --room2: #1a1b1f; --case: #26272c; --case-edge: #3d3f46;
   --glow: rgba(239,196,194,.75);
   --display: "Bricolage Grotesque", system-ui, sans-serif;
   --sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -18,7 +18,7 @@
     --ink: #eeeeef; --ink-2: #b3b6bd; --ink-3: #8b8f97;
     --line: #26272c; --rose: #f0b4bb; --rose-q: #efc4c2; --on-rose: #2a1216;
     --panel: #151518; --panel-line: #2b2c31;
-    --room1: #3a2429; --room2: #16171a; --case: #202126;
+    --room1: #3a2429; --room1-ink: #efd4d1; --room2: #16171a; --case: #202126;
     --glow: rgba(240,180,187,.2);
     color-scheme: dark;
   }
@@ -28,7 +28,7 @@
   --ink: #eeeeef; --ink-2: #b3b6bd; --ink-3: #8b8f97;
   --line: #26272c; --rose: #f0b4bb; --rose-q: #efc4c2; --on-rose: #2a1216;
   --panel: #151518; --panel-line: #2b2c31;
-  --room1: #3a2429; --room2: #16171a; --case: #202126;
+  --room1: #3a2429; --room1-ink: #efd4d1; --room2: #16171a; --case: #202126;
   --glow: rgba(240,180,187,.2);
   color-scheme: dark;
 }
@@ -116,7 +116,7 @@ h1 { font-size: clamp(3.1rem, 13.2vw, 7.4rem); line-height: .92; letter-spacing:
 .homes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 22px; }
 .home { border-radius: 22px; padding: 18px 16px 18px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
 .home p { margin: 0; font-size: 15px; line-height: 1.45; position: relative; z-index: 1; }
-.home.her { background: var(--room1); color: var(--on-rose); }
+.home.her { background: var(--room1); color: var(--room1-ink); }
 .home.him { background: var(--room2); color: var(--panel-ink); border: 1px solid var(--line); }
 .home svg { width: 34px; height: 148px; flex: none; overflow: visible; }
 .home .tag { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; opacity: .7; }

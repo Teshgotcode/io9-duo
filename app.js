@@ -319,7 +319,6 @@ function renderVerdict() {
     ["To enkle", twoSingles(), false],
   ].map(([t, v, w]) => `<div class="row${w ? " win" : ""}" data-r><dt>${t}</dt><dd><span data-v="${v}">${kr(v)}</span></dd></div>`).join("");
   $("#stamp").textContent = `Priser sjekket ${dLong(P.checked)}. Ingen cashback å regne med nå.`;
-  $("#footStamp").textContent = `Priser sjekket ${dLong(P.checked)} hos ${P.io9Duo.store}. Tall merket «sjekk i butikk» er eldre. Prisene kan endre seg.`;
 }
 
 function renderFaq() {

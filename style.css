@@ -113,6 +113,9 @@ h1 { font-size: clamp(3.1rem, 13.2vw, 7.4rem); line-height: .92; letter-spacing:
 .vgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
 .answer { font: 800 clamp(2.4rem, 8vw, 5rem)/.95 var(--display); letter-spacing: -.04em; margin: 0 0 28px; }
 .verdict-body { color: var(--ink-2); max-width: 36em; }
+.pick { border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; background: var(--surface); max-width: 36em; }
+.pick .tag { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--rose); display: block; margin-bottom: 6px; }
+.pick p { margin: 0; font-size: 15.5px; }
 .homes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 22px; }
 .home { border-radius: 22px; padding: 18px 16px 18px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
 .home p { margin: 0; font-size: 15px; line-height: 1.45; position: relative; z-index: 1; }

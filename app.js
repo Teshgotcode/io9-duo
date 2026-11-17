@@ -95,7 +95,6 @@ const dLong = iso => asDate(iso).toLocaleDateString("nb-NO", { day: "numeric", m
 const dShort = iso => asDate(iso).toLocaleDateString("nb-NO", { day: "numeric", month: "long" });
 const flag = item => item.verified ? "" : ` <span class="src">(pris fra ${dShort(item.checked)}, sjekk i butikk)</span>`;
 const headPrice = key => key === "ultimate" ? P.headsUltimate8.price / P.headsUltimate8.count : P.headsGentle8.price / P.headsGentle8.count;
-const campaignOn = () => new Date() <= asDate(P.campaign.end);
 const twoSingles = () => 2 * P.io9Single.price;
 const duoPlus = () => P.io9Duo.price + P.extraCharger.price;
 
@@ -300,9 +299,6 @@ const BRUSH = (body, edge, head, tuft, ring, screen) => `<svg viewBox="0 0 120 5
 
 function renderVerdict() {
   const saved = twoSingles() - P.io9Duo.price;
-  const offer = campaignOn()
-    ? `Tilbudet hos Power gjelder til ${dShort(P.campaign.end)}.`
-    : `Kampanjen hos Power sluttet ${dShort(P.campaign.end)}. Sjekk prisen før du kjøper.`;
   const her = BRUSH("#efc4c2", "#cf9ea1", "#f4f4f1", "#cfd5d9", "#fff", "#4a2a30");
   const him = BRUSH("#1b1c20", "#4a4c54", "#ecece8", "#c4cace", "#efc4c2", "#08080a");
   $("#verdictBody").innerHTML =
@@ -312,7 +308,7 @@ function renderVerdict() {
 <div class="home him" data-r>${him}<div><span class="tag">Etuiet</span><p>Han tar ladeetuiet, siden han reiser mye og deler bad. Etuiet lader fra stikkontakten, så han trenger ingen ekstra lader.</p></div></div>
 </div>
 <p>To enkle koster ${kr(saved)} mer.</p>
-<p>Vil du ha stående lader på vasken i stedet for etuiet, legg til en ekstra lader til ca. ${kr(P.extraCharger.price)}. ${offer}</p>`;
+<div class="pick" data-r><span class="tag">To ladere følger med</span><p>Esken inneholder både reiseetui og magnetstand, så dere har to ladere fra dag én. Du tar standen og lar den stå ved vasken, siden du bor hjemme. Han tar reiseetuiet og har det i baggen, siden han er mye på reise.</p></div>`;
   $("#duel").innerHTML = [
     ["Duo", P.io9Duo.price, true],
     ["Duo + ekstra lader", duoPlus(), false],

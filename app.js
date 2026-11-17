@@ -307,8 +307,7 @@ function renderVerdict() {
 <div class="home her" data-r>${her}<div><span class="tag">Standen</span><p>Du tar magnetladeren, siden du har eget bad hjemme.</p></div></div>
 <div class="home him" data-r>${him}<div><span class="tag">Etuiet</span><p>Han tar ladeetuiet, siden han reiser mye og deler bad. Etuiet lader fra stikkontakten, så han trenger ingen ekstra lader.</p></div></div>
 </div>
-<p>To enkle koster ${kr(saved)} mer.</p>
-<div class="pick" data-r><span class="tag">To ladere følger med</span><p>Esken inneholder både reiseetui og magnetstand, så dere har to ladere fra dag én. Du tar standen og lar den stå ved vasken, siden du bor hjemme. Han tar reiseetuiet og har det i baggen, siden han er mye på reise.</p></div>`;
+<p>To enkle koster ${kr(saved)} mer.</p>`;
   $("#duel").innerHTML = [
     ["Duo", P.io9Duo.price, true],
     ["Duo + ekstra lader", duoPlus(), false],

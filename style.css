@@ -113,9 +113,9 @@ h1 { font-size: clamp(3.1rem, 13.2vw, 7.4rem); line-height: .92; letter-spacing:
 .vgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
 .answer { font: 800 clamp(2.4rem, 8vw, 5rem)/.95 var(--display); letter-spacing: -.04em; margin: 0 0 28px; }
 .verdict-body { color: var(--ink-2); max-width: 36em; }
-.pick { border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; background: var(--surface); max-width: 36em; }
-.pick .tag { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--rose); display: block; margin-bottom: 6px; }
-.pick p { margin: 0; font-size: 15.5px; }
+.pick { border: 2px solid var(--rose); border-radius: 22px; padding: 22px 22px 20px; background: color-mix(in srgb, var(--rose) 9%, var(--surface)); margin-bottom: 18px; }
+.pick .tag { font: 600 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--rose); display: block; margin-bottom: 8px; }
+.pick p { margin: 0; font-size: 16.5px; line-height: 1.5; color: var(--ink); }
 .homes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 22px; }
 .home { border-radius: 22px; padding: 18px 16px 18px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
 .home p { margin: 0; font-size: 15px; line-height: 1.45; position: relative; z-index: 1; }
@@ -128,7 +128,7 @@ h1 { font-size: clamp(3.1rem, 13.2vw, 7.4rem); line-height: .92; letter-spacing:
 .duel .row.win { background: var(--rose-q); color: var(--on-rose); border-color: transparent; }
 .duel dt { font-size: 14px; color: var(--ink-3); }
 .duel .win dt { color: var(--on-rose); opacity: .75; }
-.duel dd { margin: 6px 0 0; font: 500 clamp(1.8rem, 6.4vw, 2.6rem)/1 var(--mono); letter-spacing: -.04em; white-space: nowrap; }
+.duel dd { margin: 6px 0 0; font: 500 clamp(2rem, 7vw, 3rem)/1 var(--mono); letter-spacing: -.04em; white-space: nowrap; }
 .stamp { font: 400 12.5px/1.5 var(--mono); color: var(--ink-3); margin: 18px 0 0; }
 
 /* Band */
